@@ -1,6 +1,9 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import { ShoppingCartScreen, ModulesScreen } from './src/screens';
+import { 
+  ShoppingCartScreen, 
+  ModulesScreen,
+  TypesScreen,
+} from './src/screens';
 
 export default function App() {
   return (
@@ -8,7 +11,7 @@ export default function App() {
       <Text>Open App.tsx to work on your app!</Text>
       <ShoppingCartScreen />
       <ModulesScreen />
-      <StatusBar style="auto" />
+      <TypesScreen />
     </View>
   );
 }
@@ -18,6 +21,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-around',
+    paddingHorizontal: 10,
   },
 });

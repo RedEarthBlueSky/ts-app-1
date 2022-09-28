@@ -1,7 +1,10 @@
 import React, {useState, useEffect} from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 // see file for default export and named export
-import multiply, { addStrings } from './helpers'
+import multiply, 
+{ addStrings as Add2, 
+  HelloWorld 
+} from './helpers'
 
 
 const ModulesScreen = ():JSX.Element => {
@@ -9,8 +12,8 @@ const ModulesScreen = ():JSX.Element => {
   const [stringResult, setStringResult] = useState<string>('')
 
   useEffect(() => {
-    setResult(multiply(10,3))
-    setStringResult(addStrings('Hello, ', 'World'))
+    setResult(multiply(8,3))
+    setStringResult(Add2('Hello, ', 'World'))
   }, [])
 
   return (
