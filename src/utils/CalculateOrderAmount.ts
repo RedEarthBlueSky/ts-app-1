@@ -6,7 +6,7 @@ export interface OrderProps {
   calculateTotal(): number
 }
 
-const CalculateOrderAmount = (order: OrderProps) => {
+export const CalculateOrderAmount = (order: OrderProps) => {
   let total = order.calculateTotal()
   const DISCOUNT = total * .1
   const TAX = total * .2;
@@ -14,5 +14,3 @@ const CalculateOrderAmount = (order: OrderProps) => {
   total += TAX
   return total
 }
-
-export { CalculateOrderAmount }

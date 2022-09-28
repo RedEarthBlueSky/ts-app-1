@@ -1,4 +1,4 @@
-import { OrderProps } from "../utils/CalculateOrderAmount"
+import { OrderProps } from "./CalculateOrderAmount"
 
 export class ShoppingCart implements OrderProps {
   calculateTotal() {
