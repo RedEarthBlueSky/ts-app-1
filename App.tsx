@@ -1,18 +1,11 @@
 import { StyleSheet, Text, View } from 'react-native';
-import { 
-  ShoppingCartScreen, 
-  ModulesScreen,
-  TypesScreen,
-} from './src/screens';
+import React from 'react'
+//  can call what you want as a default export
+import Navigator from './src/routes/HomeStack'
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open App.tsx to work on your app!</Text>
-      <ShoppingCartScreen />
-      <ModulesScreen />
-      <TypesScreen />
-    </View>
+    <Navigator />
   );
 }
 
@@ -24,4 +17,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     paddingHorizontal: 10,
   },
+  H1Bold: {
+    fontSize: 32,
+    fontWeight: 'bold',
+  }
 });
