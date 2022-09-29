@@ -5,10 +5,14 @@ import {
   InterfacesScreen,
   ModulesScreen,
   TypesScreen,
+  FunctionsScreen,
 } from '../screens'
 
 const screens = {
-  Home: {
+  Functions: {
+    screen: FunctionsScreen,
+  },
+  Interfaces: {
     screen: InterfacesScreen,
   },
   Modules: {
@@ -17,7 +21,7 @@ const screens = {
   Types: {
     screen: TypesScreen,
   },
-  Interfaces: {
+  Home: {
     screen: HomeScreen
   }
 }
