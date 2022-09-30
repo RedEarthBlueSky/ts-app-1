@@ -8,6 +8,7 @@ const FunctionsScreen = () => {
     calcArea, 
   } = functionHelpers
   const args: number[] = [0,1,2,3,4,5,6,7,8]
+  const areaArgs2: number[] = [5,5]
   const everything = sumEverything(...args)
   return (
     <View>
@@ -18,7 +19,7 @@ const FunctionsScreen = () => {
       <Text>Unknown number of arguments ...n</Text>
       <Text>{sumEverything(...args)} {sumEverything2(...args)} {sumEverything3(...args)}</Text>
       <Text>Overloads</Text>
-      <Text>{calcArea(5,4)}</Text>
+      <Text>{calcArea(...areaArgs2)}</Text>
     </View>
   )
 }

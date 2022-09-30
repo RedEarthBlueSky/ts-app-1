@@ -46,6 +46,7 @@ const employee = <Employee>{}
 
 import * as interfaceHelpers from './interfaces'
 import * as functionHelpers from './functions'
-export { interfaceHelpers, functionHelpers }
+import * as classHelpers from './classes'
+export { classHelpers, interfaceHelpers, functionHelpers }
 
 const myFavoriteColor: Color = Color.Blue

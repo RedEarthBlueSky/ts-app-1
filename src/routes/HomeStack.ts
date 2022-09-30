@@ -6,9 +6,13 @@ import {
   ModulesScreen,
   TypesScreen,
   FunctionsScreen,
+  ClassScreen,
 } from '../screens'
 
 const screens = {
+  Classes: {
+    screen: ClassScreen,
+  },
   Functions: {
     screen: FunctionsScreen,
   },
