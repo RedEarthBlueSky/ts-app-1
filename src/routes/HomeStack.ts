@@ -7,9 +7,13 @@ import {
   TypesScreen,
   FunctionsScreen,
   ClassScreen,
+  ImplementingInterfacesScreen,
 } from '../screens'
 
 const screens = {
+  ImplementingInterfaces: {
+    Screen: ImplementingInterfacesScreen,
+  },
   Classes: {
     screen: ClassScreen,
   },
