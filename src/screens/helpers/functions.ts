@@ -38,4 +38,40 @@ export const sumEverything2: SumEverything = (...x) => {
   return x.reduce((result, num) => result + num, 0)
 }
 
+//  Overloads
+
+type CalcAreaProps = (...args: number[]) => number | void
+
+export const calcArea: CalcAreaProps = (...args) => {
+    if (args.length === 2) return args[0] * args[1]
+    if (args.length === 1) return Math.pow(args[0], 2)
+    return void
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
