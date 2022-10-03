@@ -47,12 +47,14 @@ const employee = <Employee>{}
 import * as interfaceHelpers from './interfaces'
 import * as functionHelpers from './functions'
 import * as classHelpers from './classes'
-import * as implementationHelpers from './implementingInterfaces'
+import * as implementHelpers from './implementInterfaces'
+import * as genericUtils from './generics'
 export { 
-  implementationHelpers, 
+  implementHelpers, 
   classHelpers, 
   interfaceHelpers, 
-  functionHelpers 
+  functionHelpers,
+  genericUtils 
 }
 
 const myFavoriteColor: Color = Color.Blue

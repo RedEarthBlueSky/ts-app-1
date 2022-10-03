@@ -1,0 +1,1 @@
+export type randomType = (x: number, y: number) => number
