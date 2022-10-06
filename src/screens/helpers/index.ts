@@ -49,12 +49,14 @@ import * as functionHelpers from './functions'
 import * as classHelpers from './classes'
 import * as implementHelpers from './implementInterfaces'
 import * as genericUtils from './generics'
+import * as unionsUtils from './unions'
 export { 
   implementHelpers, 
   classHelpers, 
   interfaceHelpers, 
   functionHelpers,
-  genericUtils 
+  genericUtils,
+  unionsUtils,
 }
 
 const myFavoriteColor: Color = Color.Blue

@@ -16,8 +16,8 @@ const GenericsScreen = () => {
   const expiredVanillaCakes = getExpiredItems<VanillaCake>(VanillaCakes)
 
   useEffect(() => {
-    console.log(expiredChocolateCakes)
-    console.log(expiredVanillaCakes)
+    // console.log(expiredChocolateCakes)
+    // console.log(expiredVanillaCakes)
   }, [ChocolateCakes, VanillaCakes])
 
   return (
