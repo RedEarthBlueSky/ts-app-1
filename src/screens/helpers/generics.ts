@@ -31,21 +31,46 @@ class GenericClass<P> {
 interface Expirable {
   expireyDate: Date
 }
-interface ChocolateCake extends Expirable {}
-interface VanillaCake extends Expirable {}
+export interface ChocolateCake extends Expirable {}
+export interface VanillaCake extends Expirable {}
 
-const ChocolateCakes: ChocolateCake[] = [
+export const ChocolateCakes: ChocolateCake[] = [
   {expireyDate: new Date()}
 ]
 
-const VanillaCakes: VanillaCake[] = [
+export const VanillaCakes: VanillaCake[] = [
   {expireyDate: new Date()}
 ]
 
-const getExpiredItems = 
+export const getExpiredItems: GetExpiredItemsFunction = (items) => {
+    const currentDate = new Date().getTime()
+    return items.filter(item => item.expireyDate.getDate() < currentDate)
+}
 
+interface GetExpiredItemsFunction {
+  <Item extends Expirable>(items: Array<Item>): Array<Item>
+}
 
+//  Further use Generics with Interfaces
+export interface ShoppingCart<ItemId, Item> {
+  items: Array<Item>
+  addItem(this: ShoppingCart<ItemId, Item>, item: Item): void
+  getItemById(this: ShoppingCart<ItemId, Item>                                                                                                                                                                                                                                                                                                                                                                                , id: ItemId): Item
+}
 
+interface Item {
+  id: number,
+  price: number,
+}
 
+export const cart: ShoppingCart<number, Item> = {
+  items: [],
+  addItem(item) {
+    this.items.push(item)
+  },
+  getItemById(id) {
+    return this.items.find(item => item.id === id)
+  }
+}
 
 
