@@ -23,10 +23,10 @@ const GenericsScreen = () => {
   return (
     <View>
       <Text style={styles.H1Bold}>Generics Screen</Text>
-      <Text>Generics describe components that work with a variety of types</Text>
+      <Text>Generics components that work with many types</Text>
       <Text>T generic type parameter in angle brackets after function name</Text>
-      <Text>This type parameter T can be used to describe the argument and return types</Text>
-      <Text>Can also be used inside of the function body</Text>
+      <Text>Type parameter T can be used to describe the argument and return types</Text>
+      <Text>Can also be used inside the function body</Text>
       <Text></Text>
       <Text></Text>
     </View>

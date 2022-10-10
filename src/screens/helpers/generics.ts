@@ -1,5 +1,50 @@
 //  Generic Functions
 
+//  the generic part is the parameter inside the angle brackets and this affects the type value
+type numArray = Array<number>
+type stringArray = Array<string>
+
+//  lets look at a function
+export const last = (arr: Array<number>): number => {
+  return arr[arr.length - 1]
+}
+
+let l = last([1,2,3,4,])
+let l2 = last(['a', 'b', null])
+
+//  what if we want the array to work with any types
+//  T is just a variable name, you can call it whatever you like
+//  T represens the generic type to be passed into the function
+const lastAnyTypeArray = <T>(arr: T[]): T => {
+  return arr[arr.length - 1]
+}
+//  it is not needed to explicity state the array type but can be done
+let m = lastAnyTypeArray<number>([1,2,3,4,])
+m = lastAnyTypeArray([1,2,3,4,])
+// can be any or ...  string | number | null | undefined
+let m2 = lastAnyTypeArray<any>(['a', 'b', null, undefined, 7])
+m2 = lastAnyTypeArray(['a', 'b', null, undefined, 7])
+let m3 = lastAnyTypeArray<string>(['a', 'b', 'c'])
+m3 = lastAnyTypeArray(['a', 'b', 'c'])
+
+//  Let's look at another function
+let makeArr = (x:number) => {
+  return [x]
+}
+
+let v = makeArr(5)
+let v2 = makeArr('Hello World')
+
+//  Let's make makeArr generic
+const makeArr2 = <T>(x: T): Array<T> => {
+  return [x]
+}
+
+let u = makeArr2(5)
+let u2 = makeArr2('Hello World')
+let u3 = makeArr2(null)
+
+
 //  T generic type parameters
 export const genericArrowFunction = <T,>(x: T): T => x
 
