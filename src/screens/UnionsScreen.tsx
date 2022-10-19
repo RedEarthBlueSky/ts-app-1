@@ -4,13 +4,16 @@ import { unionsUtils, intersectionUtils, genericUtils } from './helpers'
 
 const UnionsScreen = () => {
   const { combineThreeObjects } = intersectionUtils
+  const { makeFullName } = genericUtils
   let objA = { 1: 'one', 2: 'two' }
   let objB = { 3: 'three', 4: 'four' }
   let objC = { 5: 'thirty five', 6: 'forty four' }
   let join3 = combineThreeObjects(objA, objB, objC)
+  let nameObj = makeFullName({ firstName: 'Hello', lastName: 'World!', age: 54 })
 
   useEffect(() => {
-    console.log(join3)
+    // console.log(join3)
+    console.log()
   }, [join3])
 
   return (

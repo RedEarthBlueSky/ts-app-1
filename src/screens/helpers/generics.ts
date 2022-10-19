@@ -44,6 +44,40 @@ let u = makeArr2(5)
 let u2 = makeArr2('Hello World')
 let u3 = makeArr2(null)
 
+//  Add more than one parameter type to make a toople
+//  Will not accept Array<T, Y> as return type use as below
+const makeArr3 = <T, Y>(x: T, y: Y): [T, Y] => {
+  return [x, y]
+}
+u = makeArr3(5, 6)
+u2 = makeArr3('Hello World', 'b')
+u3 = makeArr3(null, null)
+//  let's try an override
+let u4 = makeArr3<string | null, string | number>('Hello World', 2)
+
+//  Extending types
+interface IName {
+  firstName: string
+  lastName: string
+}
+interface IReturn {
+  object: object
+  fullName: string
+}
+export const makeFullName = <T extends IName>(obj: T): T => {
+  return {
+    ...obj,
+    fullName: obj.firstName + ' ' + obj.lastName
+  }
+}
+
+
+
+
+
+
+
+
 
 //  T generic type parameters
 export const genericArrowFunction = <T,>(x: T): T => x
