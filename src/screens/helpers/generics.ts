@@ -1,6 +1,7 @@
 //  Generic Functions
 
-//  the generic part is the parameter inside the angle brackets and this affects the type value
+//  the generic part is the parameter inside the angle brackets 
+//  and this affects the type value
 type numArray = Array<number>
 type stringArray = Array<string>
 
@@ -18,7 +19,8 @@ let l2 = last(['a', 'b', null])
 const lastAnyTypeArray = <T>(arr: T[]): T => {
   return arr[arr.length - 1]
 }
-//  it is not needed to explicity state the array type but can be done
+//  it is not needed to explicity state the array type 
+//  but can be done
 let m = lastAnyTypeArray<number>([1,2,3,4,])
 m = lastAnyTypeArray([1,2,3,4,])
 // can be any or ...  string | number | null | undefined
@@ -64,12 +66,32 @@ interface IReturn {
   object: object
   fullName: string
 }
-export const makeFullName = <T extends IName>(obj: T): T => {
+export const makeFullName = <T extends IName>(
+  obj: T
+  //  Note how I have extended T here to include fullName
+  //  being added to the object
+  ): T & {fullName: string}=> {
   return {
     ...obj,
     fullName: obj.firstName + ' ' + obj.lastName
   }
 }
+
+//  INTERFACES WITH TYPES AND GENERICS
+
+interface Tab<T> {
+  id: string
+  position: number
+  data: T
+}
+
+type NumberTab = Tab<number>
+type StringTab = Tab<string>
+type ThreeTab = Tab<object | string | number>
+
+
+
+
 
 
 

@@ -10,10 +10,10 @@ const UnionsScreen = () => {
   let objC = { 5: 'thirty five', 6: 'forty four' }
   let join3 = combineThreeObjects(objA, objB, objC)
   let nameObj = makeFullName({ firstName: 'Hello', lastName: 'World!', age: 54 })
-
+  const { firstName, fullName, lastName, age } = nameObj
   useEffect(() => {
     // console.log(join3)
-    console.log()
+    // sconsole.log(nameObj)
   }, [join3])
 
   return (
@@ -24,7 +24,8 @@ const UnionsScreen = () => {
       <Text></Text>
       <Text style={styles.H1Bold}>Type Alias</Text>
       <Text>Assign a new name to the type do not create a new type</Text>
-      <Text></Text>
+      <Text>{firstName} {lastName} is {age} years old </Text>
+      <Text>{fullName} is {age} years old </Text>
     </View>
   )
 }
