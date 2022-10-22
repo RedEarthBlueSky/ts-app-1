@@ -10,6 +10,9 @@ import {
 } from '../screens'
 
 export const screens = {
+  Functions: {
+    screen: FunctionsScreen,
+  },
   Unions: {
     screen: UnionsScreen,
   },
@@ -18,9 +21,6 @@ export const screens = {
   },
   Classes: {
     screen: ClassScreen,
-  },
-  Functions: {
-    screen: FunctionsScreen,
   },
   Interfaces: {
     screen: InterfacesScreen,

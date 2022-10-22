@@ -13,9 +13,7 @@ type MyFunc = (a: number, b: number) => number
 export const sum2: MyFunc = (a, b) => a + b
 export const sum3: Sum = (a, b) => a + b
 
-//  Unknown number of arguments
-//  using the spread operator
-//  use basic function
+//  Unknown number of arguments using the spread operator
 export const sumEverything = (...x: number[]): number => {
   return x.reduce((result, num) => result + num, 0)
 }
@@ -28,12 +26,12 @@ interface SumEverything {
   (...x: number[]): number
 }
 
-// use type === the best approach when using a function
+// use type is the best approach when using a function
 export const sumEverything3: SumFunc = (...x) => {
   return x.reduce((result, num) => result + num, 0)
 }
 
-// use interface === best approach when using objects and method objects
+// use interface is best approach when using objects and method objects
 export const sumEverything2: SumEverything = (...x) => {
   return x.reduce((result, num) => result + num, 0)
 }

@@ -1,17 +1,27 @@
+//  FunctionsScreen
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { functionHelpers } from './helpers'
+import React, { useState } from 'react'
+import { functionHelpers } from '../helpers'
+import { PropsComponent } from './components'
 
-const FunctionsScreen = () => {
+const FunctionsScreen: React.FC = () => {
   const { sum, sum2, sum3, 
     sumEverything, sumEverything2, sumEverything3,
     calcArea, 
   } = functionHelpers
+
+
+
   const args: number[] = [0,1,2,3,4,5,6,7,8]
   const areaArgs2: number[] = [5,5]
   const everything = sumEverything(...args)
   return (
-    <View>
+    <View style={styles.container}>
+      <PropsComponent 
+        age={48}
+        name={'Mr Ian'}
+        greeting={'Happy Birthday'}
+      />
       <Text style={styles.H1Bold}>Functions Screen</Text>
       <Text>Functions (optional and default parameters)</Text>
       <Text>Sums</Text>
@@ -30,5 +40,11 @@ const styles = StyleSheet.create({
   H1Bold: {
     fontSize: 32,
     fontWeight: 'bold',
+  },
+  container: {
+    display: 'flex',
+    height: '100%',
+    padding: 10,
+    justifyContent: 'space-around',
   }
 })

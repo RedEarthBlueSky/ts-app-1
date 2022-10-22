@@ -11,6 +11,7 @@ const UnionsScreen = () => {
   let join3 = combineThreeObjects(objA, objB, objC)
   let nameObj = makeFullName({ firstName: 'Hello', lastName: 'World!', age: 54 })
   const { firstName, fullName, lastName, age } = nameObj
+  
   useEffect(() => {
     // console.log(join3)
     // sconsole.log(nameObj)

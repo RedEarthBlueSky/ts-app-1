@@ -70,14 +70,14 @@ export const makeFullName = <T extends IName>(
   obj: T
   //  Note how I have extended T here to include fullName
   //  being added to the object
-  ): T & {fullName: string}=> {
+  ): T & {fullName: string} => {
   return {
     ...obj,
     fullName: obj.firstName + ' ' + obj.lastName
   }
 }
 
-//  INTERFACES WITH TYPES AND GENERICS
+//  INTERFACES WITH TYPES AND GENERICS DOUBLE THE
 
 interface Tab<T> {
   id: string
@@ -88,6 +88,29 @@ interface Tab<T> {
 type NumberTab = Tab<number>
 type StringTab = Tab<string>
 type ThreeTab = Tab<object | string | number>
+
+interface Tab2<T, Y> {
+  id: string
+  position: number
+  data: T
+  moreData: Y
+}
+
+type NumberTab2 = Tab2<number, number>
+type StringTab2 = Tab2<string, string>
+type ThreeTab2 = Tab2<string, number>
+
+//  so we can add a key value pair to any object
+const returnData = <NumberTab2>(
+  obj: NumberTab2
+): NumberTab2 & {otherData: string} => {
+  return {
+    ...obj,
+    otherData: 'This is my other data'
+  }
+}
+
+
 
 
 
