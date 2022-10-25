@@ -6,10 +6,18 @@ import {
   FunctionsScreen,
   ClassScreen,
   GenericsScreen,
-  UnionsScreen
+  UnionsScreen,
+  TypeAliasScreen,
+  LibsAndTypesScreen,
 } from '../screens'
 
 export const screens = {
+  Libraries: {
+    screen: LibsAndTypesScreen,
+  },
+  TypeAlias: {
+    screen: TypeAliasScreen,
+  },
   Functions: {
     screen: FunctionsScreen,
   },

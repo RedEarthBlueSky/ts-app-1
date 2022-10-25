@@ -51,6 +51,7 @@ import * as implementHelpers from './implementInterfaces'
 import * as genericUtils from './generics'
 import * as unionsUtils from './unions'
 import * as intersectionUtils from './intersections'
+import * as typeAliasUtils from './type-alias'
 export { 
   implementHelpers, 
   classHelpers, 
@@ -59,6 +60,7 @@ export {
   genericUtils,
   unionsUtils,
   intersectionUtils,
+  typeAliasUtils
 }
 
 const myFavoriteColor: Color = Color.Blue

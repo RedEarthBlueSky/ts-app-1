@@ -41,7 +41,7 @@ export const sumEverything2: SumEverything = (...x) => {
 type CalcAreaProps = (...args: number[]) => number
 
 //  need to add edge case to handle empty array etc
-export const calcArea: CalcAreaProps = (...args) => {
+export const calcArea: CalcAreaProps = (...args: number[]) => {
     if (args.length === 2) return args[0] * args[1]
     if (args.length === 1) return Math.pow(args[0], 2)
 }
