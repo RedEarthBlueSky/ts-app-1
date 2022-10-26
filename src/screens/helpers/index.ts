@@ -52,15 +52,17 @@ import * as genericUtils from './generics'
 import * as unionsUtils from './unions'
 import * as intersectionUtils from './intersections'
 import * as typeAliasUtils from './type-alias'
+import * as declarationMerginUtils from './declaraction-merging'
 export { 
   implementHelpers, 
+  declarationMerginUtils,
   classHelpers, 
   interfaceHelpers, 
   functionHelpers,
   genericUtils,
   unionsUtils,
   intersectionUtils,
-  typeAliasUtils
+  typeAliasUtils,
 }
 
 const myFavoriteColor: Color = Color.Blue

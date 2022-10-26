@@ -12,7 +12,10 @@ const LibsAndTypesScreen = () => {
       <Text style={styles.PlainText} >If you import a package and it contains clients you can use</Text>
       <Text style={styles.PlainText} >Hover over the import and you will see the type.</Text>
       <Text style={styles.PlainText} >Hold CMND and click on the type variable to see the type definition.</Text>
-      
+      <Text style={styles.PlainText}>Conversely if we hover over React there is no type defined</Text>
+      <Text style={styles.PlainText}>We can try `npm install @types/react`</Text>
+      <Text style={styles.H2Bold}>Declaration Merging</Text>
+
     </View>
   )
 }
