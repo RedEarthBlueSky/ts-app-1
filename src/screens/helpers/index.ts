@@ -52,10 +52,10 @@ import * as genericUtils from './generics'
 import * as unionsUtils from './unions'
 import * as intersectionUtils from './intersections'
 import * as typeAliasUtils from './type-alias'
-import * as declarationMerginUtils from './declaraction-merging'
+import * as merginUtils from './merging'
 export { 
   implementHelpers, 
-  declarationMerginUtils,
+  merginUtils,
   classHelpers, 
   interfaceHelpers, 
   functionHelpers,

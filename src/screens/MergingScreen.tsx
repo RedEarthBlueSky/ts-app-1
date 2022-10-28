@@ -1,15 +1,17 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const DeclaractionMerginScreen = () => {
+
+const MergingScreen = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.H2Bold}>Declaraction Mergin Screen</Text>
+      <Text style={styles.H2Bold}>Declaraction Merging</Text>
+      <Text style={styles.H2Bold}>Namespace Merging</Text>
     </View>
   )
 }
 
-export { DeclaractionMerginScreen }
+export { MergingScreen }
 
 const styles = StyleSheet.create({
   container: {

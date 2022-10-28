@@ -9,9 +9,15 @@ import {
   UnionsScreen,
   TypeAliasScreen,
   LibsAndTypesScreen,
+  MergingScreen,
 } from '../screens'
 
+const titledm: string = 'Declaration Merging'
+
 export const screens = {
+  Merging: {
+    screen: MergingScreen,
+  },
   Libraries: {
     screen: LibsAndTypesScreen,
   },
