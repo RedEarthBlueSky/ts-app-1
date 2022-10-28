@@ -1,12 +1,21 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, { useEffect } from 'react'
+import { merginUtils } from './helpers'
 
 
 const MergingScreen = () => {
+  const { MyNamespace, Vegetables } = merginUtils
+
+  useEffect(() => {
+  })
+
   return (
     <View style={styles.container}>
-      <Text style={styles.H2Bold}>Declaraction Merging</Text>
-      <Text style={styles.H2Bold}>Namespace Merging</Text>
+      <Text style={styles.H2Bold}>Merging</Text>
+      <Text style={styles.H3Bold}>Declaraction Merging</Text>
+      <Text style={styles.H3Bold}>Namespace Merging</Text>
+      <Text>{MyNamespace.x} {Vegetables.makeSalad()}</Text>
+      <Text></Text>
     </View>
   )
 }
@@ -23,6 +32,11 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 5,
     marginTop: 15,
+  },
+  H3Bold: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 5,
   },
   PlainText: {
     fontSize: 18,

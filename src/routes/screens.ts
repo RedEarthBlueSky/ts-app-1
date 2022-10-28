@@ -10,11 +10,15 @@ import {
   TypeAliasScreen,
   LibsAndTypesScreen,
   MergingScreen,
+  UtilityScreen,
 } from '../screens'
 
 const titledm: string = 'Declaration Merging'
 
 export const screens = {
+  Utility: {
+    screen: UtilityScreen,
+  },
   Merging: {
     screen: MergingScreen,
   },
