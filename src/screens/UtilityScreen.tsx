@@ -1,12 +1,13 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { untilityProviders } from './helpers'
 
 const UtilityScreen = () => {
   return (
     <View>
       <View style={styles.container}>
       <Text style={styles.H2Bold}>Utility Types</Text>
-      <Text style={styles.H3}>Facilitate common type transformations, available globally.</Text>
+      <Text style={styles.H3}>Facilitates common type transformations, available globally.</Text>
       <Text style={styles.H3Bold}></Text>
       <Text></Text>
       <Text></Text>

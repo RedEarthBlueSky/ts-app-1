@@ -53,6 +53,10 @@ import * as unionsUtils from './unions'
 import * as intersectionUtils from './intersections'
 import * as typeAliasUtils from './type-alias'
 import * as merginUtils from './merging'
+//  from now on helpers are providers as 
+//  1.  Helpers sounds stupid and is unhelpful
+//  2.  Helpers provide support to the component
+import * as utilityProviders from './untilitys'
 export { 
   implementHelpers, 
   merginUtils,
@@ -63,6 +67,7 @@ export {
   unionsUtils,
   intersectionUtils,
   typeAliasUtils,
+  utilityProviders
 }
 
 const myFavoriteColor: Color = Color.Blue
